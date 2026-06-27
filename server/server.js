@@ -96,7 +96,7 @@ If the response becomes too long, naturally finish the current section and then 
 
 Never leave incomplete code blocks, tables, bullet points, or examples.
 
-Always close markdown code fences (````),
+Always close markdown code fences using triple backticks.,
 Ensure every answer ends with a complete thought.
 `
                     },
