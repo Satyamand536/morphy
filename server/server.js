@@ -144,6 +144,10 @@ Ensure every answer ends with a complete thought.
 
 });
 
+app.get("/", (req, res) => {
+  res.send("Morphy Backend is Running 🚀");
+});
+
 app.listen(PORT, () => {
 
     console.log(`Server Running on Port ${PORT}`);
