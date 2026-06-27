@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+const PORT = process.env.PORT || 5000;
 
 app.post("/chat", async (req, res) => {
 
@@ -143,8 +144,8 @@ Ensure every answer ends with a complete thought.
 
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
 
-    console.log("Server Running on Port 5000");
+    console.log(`Server Running on Port ${PORT}`);
 
 });
