@@ -14,7 +14,7 @@ function Chat() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/chat", {
+      const res = await axios.post("https://morphy-6hyc.onrender.com/chat", {
         prompt,
       });
 
