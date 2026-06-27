@@ -1,0 +1,481 @@
+/* ===========================================
+                GLOBAL
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f4f4;
+
+    color:#222;
+
+    transition:.3s;
+
+}
+
+.app{
+
+    min-height:100vh;
+
+    padding:40px 15px;
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+            THEME BUTTON
+=========================================== */
+
+#themeToggle{
+
+    display:block;
+
+    margin:20px auto;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+            CONTAINER
+=========================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+                HEADING
+=========================================== */
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+
+    color:#000;
+    font-weight:700;
+
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+}
+/* ===========================================
+            INPUT SECTION
+=========================================== */
+
+.input-box{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+}
+
+input{
+
+    padding:10px;
+
+    font-size:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#666;
+
+}
+
+.edit-input{
+
+    width:100%;
+
+}
+
+/* ===========================================
+                BUTTON
+=========================================== */
+
+button{
+
+    padding:10px 15px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+}
+
+/* ===========================================
+                TODO LIST
+=========================================== */
+
+ul{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px;
+
+    margin-bottom:10px;
+
+    background:#eee;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+li span{
+
+    flex:1;
+
+    word-break:break-word;
+
+}
+
+.completed span{
+
+    text-decoration:line-through;
+
+    color:gray;
+
+}
+
+/* ===========================================
+            ACTION BUTTONS
+=========================================== */
+
+.actions{
+
+    display:flex;
+
+    gap:5px;
+
+    flex-shrink:0;
+
+}
+
+.actions button{
+
+    min-width:42px;
+
+}
+
+/* ===================================================
+                DARK MODE
+=================================================== */
+
+body.dark-mode{
+
+    background:#121212;
+
+    color:#fff;
+
+}
+
+
+body.dark-mode h2{
+    color:#fff;
+}
+
+body.dark-mode .container{
+
+    background:#1f1f1f;
+
+    box-shadow:0 0 10px rgba(255,255,255,.12);
+
+}
+
+body.dark-mode input{
+
+    background:#2d2d2d;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+body.dark-mode .edit-input{
+
+    background:#2d2d2d;
+
+    color:white;
+
+    border:1px solid #555;
+
+}
+
+body.dark-mode button{
+
+    background:#444;
+
+    color:white;
+
+    border:1px solid #666;
+
+}
+
+body.dark-mode li{
+
+    background:#2d2d2d;
+
+}
+
+body.dark-mode .completed span{
+
+    color:#aaa;
+
+}
+
+body.dark-mode #themeToggle{
+
+    background:#666;
+
+    color:white;
+
+}
+
+/* ===================================================
+                    TABLET
+=================================================== */
+
+@media (max-width:768px){
+
+.app{
+
+    padding:25px 15px;
+
+}
+
+.container{
+
+    max-width:95%;
+
+}
+
+}
+
+/* ===================================================
+                    MOBILE
+=================================================== */
+
+@media (max-width:480px){
+
+.app{
+
+    padding:20px 10px;
+
+}
+
+.container{
+
+    margin:20px auto;
+
+    padding:15px;
+
+}
+
+h2{
+
+    font-size:24px;
+
+}
+
+.input-box{
+
+    flex-direction:column;
+
+}
+
+.input-box button{
+
+    width:100%;
+
+}
+
+input{
+
+    width:100%;
+
+    font-size:15px;
+
+}
+
+button{
+
+    font-size:15px;
+
+}
+
+li{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.actions{
+
+    width:100%;
+
+    justify-content:flex-end;
+
+    flex-wrap:wrap;
+
+}
+
+.actions button{
+
+    flex:1;
+
+}
+
+#themeToggle{
+
+    width:100%;
+
+}
+
+}
+
+/* ===================================================
+                EXTRA SMALL MOBILE
+            (300px - 360px)
+=================================================== */
+
+@media (max-width:360px){
+
+.app{
+
+    padding:15px 8px;
+
+}
+
+.container{
+
+    padding:12px;
+
+}
+
+h2{
+
+    font-size:20px;
+
+}
+
+input{
+
+    padding:8px;
+
+    font-size:14px;
+
+}
+
+button{
+
+    padding:8px 10px;
+
+    font-size:14px;
+
+}
+
+.actions{
+
+    justify-content:center;
+
+}
+
+.actions button{
+
+    min-width:45px;
+
+}
+
+li{
+
+    padding:8px;
+
+}
+
+}
+
+/* ===================================================
+                LARGE DESKTOP
+=================================================== */
+
+@media (min-width:1400px){
+
+.container{
+
+    max-width:520px;
+
+}
+
+}
